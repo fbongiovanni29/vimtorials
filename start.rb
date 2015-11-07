@@ -1,0 +1,5 @@
+VIM.command("vi one.md")
+VIM.command("vs")
+VIM.command("vertical resize 75")
+VIM.command("vi one.rb")
+VIM.command("wincmd h")

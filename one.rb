@@ -1,3 +1,2 @@
-def one
-	puts "this is one"
-end
+one one one
+rb rb rb rb

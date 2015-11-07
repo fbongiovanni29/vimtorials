@@ -1,13 +1,14 @@
-x = ['one.rb', 'two.rb', 'three.rb']
+
+rb = ['one.rb', 'two.rb', 'three.rb']
+md = ['one.md', 'two.md', 'three.md']
 
 
 page = VIM::Buffer.current
-#page = VIM.command("put =expand('%')")
 page = page.name.split('/').last
-elem = x.index(page)
-puts elem
-#VIM.command("vi #{x[1]}")
-#VIM.command(":ruby load '#{x[2]}'")
-VIM.command("vi #{x[(elem+1)]}")
-#puts page+" is this page!"
-#VIM.command('vi ":echo @%"')
+elem = rb.index(page)
+VIM.command("vertical resize 75")
+VIM.command("vi #{rb[(elem+1)%3]}")
+VIM.command("wincmd l")
+VIM.command("vi #{md[(elem+1)%3]}")
+
+VIM.command("wincmd h")
