@@ -6,6 +6,8 @@ page = VIM::Buffer.current
 page = page.name.split('/').last
 elem = x.index(page)
 puts elem
-VIM.command("ruby load '#{x[((elem+1)%3)]}'")
+#VIM.command("vi #{x[1]}")
+#VIM.command(":ruby load '#{x[2]}'")
+VIM.command("vi #{x[(elem+1)]}")
 #puts page+" is this page!"
 #VIM.command('vi ":echo @%"')
