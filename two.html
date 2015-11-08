@@ -1,0 +1,8 @@
+#You'll  want to easily setup one user to follow another inside of your Sinatra routes with a handy instance method:
+
+get "/users/:id/follow" do
+user = User.find(params[:id])
+current_user.follow!(user) if user
+flash[:notice] = "User followed successfully."
+redirect "/"
+end

@@ -1,5 +1,5 @@
 VIM.command("vi tut_one.md")
 VIM.command("vs")
 VIM.command("vertical resize 75")
-VIM.command("vi one.rb")
+VIM.command("vi #{Dir["one.*"][0]}")
 VIM.command("wincmd h")
