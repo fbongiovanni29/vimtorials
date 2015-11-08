@@ -3,3 +3,9 @@ This is what is known as a self-referential database relationship. It is similar
 Assuming you’re using ActiveRecord with Sinatra, create a new migration:
 
 We will be using the ! (known as bang) to run terminal commands in Vi with \ to escape spaces 
+
+Copy:
+
+rake db:create_migration NAME=create_relationships_table
+
+Press ":", paste and hit enter
