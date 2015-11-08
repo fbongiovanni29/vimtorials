@@ -1,4 +1,4 @@
-VIM.command("vi one.md")
+VIM.command("vi tut_one.md")
 VIM.command("vs")
 VIM.command("vertical resize 75")
 VIM.command("vi one.rb")

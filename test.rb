@@ -1,6 +1,6 @@
 
-rb = ['one.rb', 'two.rb', 'three.rb']
-md = ['one.md', 'two.md', 'three.md']
+rb = [Dir["one.*"][0], Dir["two.*"][0], Dir["three.*"][0]]
+md = ['tut_one.md', 'tut_two.md', 'tut_three.md']
 
 
 page = VIM::Buffer.current
