@@ -1,13 +1,21 @@
-This is an example tutorial for how the Vimtorial repo, built by Scripting Vim with Ruby, works. Inside of this tutorial we will learn how the bootstrap grid system works by building a colorful layout that shows how each size responds at a width of 4 out of 12. Feel free to refactor the code to learn more.
+IF FILE DOESNT RUN WITH ```$ vim``` COMMAND USE ```$ vi``` instead. 
 
+This is a project I created to learn how to Script Vim in Ruby. It's built so anyone can drop in files and create a Vim based tutorial for anything! It opens up two windows, one for the file to display and another one for the tutorial steps/instructions. 
 
-To work the Vimtorial just type (while in command mode):
+It only accepts three tutorial files and three display files currently to fix it you must go into next.rb and extend the arrays.
 
-:ruby load 'next.rb'
+The tutorial md files must be ordered by tut_one.md, tut_two.md, tut_three.md...
 
-and hit return. (You may have to hit it twice)
+The display file can have any extension name, it looks for files with the file basename of *one.*, *two.*, *three.*...
 
-If you are in the right window you will have to hit return once after loading next.rb
+To run first create a README.md file then run the command 
 
-This should be the only command you'll need to remember and if you get lost just type :q twice
+```$ vi README.md```
 
+Then in **vi** type:
+
+```:ruby load "next.rb"```
+
+and hite return
+
+To go to the next file just type: ```:ruby load "next.rb"``` again, which will continue to cycle you back to the first file at the end.
