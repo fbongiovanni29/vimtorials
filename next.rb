@@ -1,4 +1,6 @@
-file = [Dir["one.*"][0], Dir["two.*"][0], Dir["three.*"][0]]
+#Code documented by comments in official file at https://github.com/fbongiovanni29/vimtorials
+#Fourth and Fifth file added here and in tut variable
+file = [Dir["one.*"][0], Dir["two.*"][0], Dir["three.*"][0], Dir["four.*"][0], Dir["five.*"][0]]
 page = VIM::Buffer.current
 page = page.name.split('/').last
 if page == "README.md"	
@@ -15,12 +17,13 @@ if VIM::Window.current == VIM::Window[1]
 end
 
 elem = file.index(page)
-tut = ['tut_one.md', 'tut_two.md', 'tut_three.md']
+tut = ['tut_one.md', 'tut_two.md', 'tut_three.md', 'tut_four.md', 'tut_five.md']
 
+#Modulos changed to expand to five files
 VIM.command("vertical resize 75")
-VIM.command("vi #{file[(elem+1)%3]}")
+VIM.command("vi #{file[(elem+1)%5]}")
 VIM.command("wincmd l")
-VIM.command("vi #{tut[(elem+1)%3]}")
+VIM.command("vi #{tut[(elem+1)%5]}")
 VIM.command("wincmd h")
 
 if file[elem].split('.')[1].to_s == "open"
